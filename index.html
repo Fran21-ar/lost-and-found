@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos Perdidos</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Objetos Perdidos y Encontrados</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Subir Objeto</a></li>
+        <li><a href="#">Buscar Objeto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="upload-section">
+      <h2>Subir Objeto Encontrado</h2>
+      <form id="uploadForm">
+        <label for="objectName">Nombre del Objeto:</label>
+        <input type="text" id="objectName" name="objectName" placeholder="Ej: Cartera negra" required>
+
+        <label for="objectDescription">Descripción:</label>
+        <textarea id="objectDescription" name="objectDescription" placeholder="Describe el objeto..." required></textarea>
+
+        <label for="objectImage">Imagen del Objeto:</label>
+        <input type="file" id="objectImage" name="objectImage" accept="image/*">
+
+        <button type="submit">Subir Objeto</button>
+      </form>
+    </section>
+
+    <section class="search-section">
+      <h2>Buscar Objetos Perdidos</h2>
+      <input type="text" id="searchInput" placeholder="Buscar por nombre o descripción...">
+      <ul id="objectList">
+        <!-- Aquí se mostrarán los objetos -->
+        <li>No hay objetos por el momento.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Objetos Perdidos y Encontrados</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
